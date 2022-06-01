@@ -53,7 +53,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scriptes\HealthBar.cs" />
-     <Compile Include="Assets\Scriptes\Health.cs" />
+     <Compile Include="Assets\Scriptes\HealthComponent.cs" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
