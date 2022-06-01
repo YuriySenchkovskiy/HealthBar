@@ -14,7 +14,7 @@ public class HealthBar : MonoBehaviour
 
     private void OnEnable()
     { 
-        _health.OnChangedHealth += SetBarValue;
+        _health.ChangedHealth += OnSetBarValue;
     }
 
     private void Start()
@@ -25,10 +25,10 @@ public class HealthBar : MonoBehaviour
 
     private void OnDisable()
     { 
-        _health.OnChangedHealth -= SetBarValue;
+        _health.ChangedHealth -= OnSetBarValue;
     }
 
-    private void SetBarValue(int health)
+    private void OnSetBarValue(int health)
     { 
         if (_currentCoroutine != null)
         {

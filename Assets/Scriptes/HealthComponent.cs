@@ -9,7 +9,7 @@ public class HealthComponent : MonoBehaviour
     private int _minHealth;
     private int _maxHealth;
 
-    public UnityAction<int> OnChangedHealth;
+    public UnityAction<int> ChangedHealth;
     public int Health => _health;
     
     private void Start()
@@ -21,12 +21,12 @@ public class HealthComponent : MonoBehaviour
     public void ApplyHeal(int heal)
     {
         _health = Mathf.Clamp(_health + heal, _minHealth, _maxHealth);
-        OnChangedHealth?.Invoke(_health);
+        ChangedHealth?.Invoke(_health);
     }
 
     public void ApplyDamage(int damage)
     {
         _health = Mathf.Clamp(_health - damage, _minHealth, _maxHealth);
-        OnChangedHealth?.Invoke(_health);
+        ChangedHealth?.Invoke(_health);
     }
 }
