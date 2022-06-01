@@ -14,7 +14,7 @@ public class HealthBar : MonoBehaviour
 
     private void OnEnable()
     { 
-        _health.ChangedHealth += SetBarValue;
+        _health.OnChangedHealth += SetBarValue;
     }
 
     private void Start()
@@ -25,7 +25,7 @@ public class HealthBar : MonoBehaviour
 
     private void OnDisable()
     { 
-        _health.ChangedHealth -= SetBarValue;
+        _health.OnChangedHealth -= SetBarValue;
     }
 
     private void SetBarValue(int health)
